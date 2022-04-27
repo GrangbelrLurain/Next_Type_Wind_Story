@@ -4,20 +4,20 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { SearchButton } from './SearchButton'
 
 export default {
-  title: 'Buttons/SearchButton/Button',
+  title: 'Atoms/Buttons/SearchButton',
   component: SearchButton,
-} as ComponentMeta<typeof Button>
+} as ComponentMeta<typeof SearchButton>
 
 const Template: ComponentStory<typeof SearchButton> = args => (
   <SearchButton {...args} />
 )
 
-export const on = Template.bind({})
-on.args = {
-  primary: true,
+export const white = Template.bind({})
+white.args = {
+  theme: 'white',
 }
 
-export const off = Template.bind({})
-off.args = {
-  primary: false,
+export const black = Template.bind({})
+black.args = {
+  theme: 'black',
 }
